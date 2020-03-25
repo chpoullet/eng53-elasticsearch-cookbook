@@ -22,3 +22,7 @@ end
 describe package('openjdk-8-jdk') do
   it { should be_installed }
 end
+
+describe package('apt-transport-https') do
+  it { should be_installed }
+end
