@@ -18,3 +18,7 @@ end
 describe service "elasticsearch" do
   it { should be_enabled }
 end
+
+describe package('openjdk-8-jd') do
+  it { should be_installed }
+end
