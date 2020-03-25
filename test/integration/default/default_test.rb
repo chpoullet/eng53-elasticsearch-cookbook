@@ -14,3 +14,8 @@ end
 describe port(80), :skip do
   it { should_not be_listening }
 end
+
+describe service "elastisearch" do
+  it { should be_running }
+  it { should be_enabled }
+end

@@ -15,15 +15,17 @@ describe 'elasticsearch_cookbook::default' do
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
     end
-  end
 
-  context 'When all attributes are default, on CentOS 7' do
-    # for a complete list of available platforms and versions see:
-    # https://github.com/chefspec/fauxhai/blob/master/PLATFORMS.md
-    platform 'centos', '7'
+    it 'enables the elasticsearch service' do
+      expect(chef_run).to enable_service 'elasticsearch'
+    end
 
-    it 'converges successfully' do
-      expect { chef_run }.to_not raise_error
+    it 'starts the elasticsearch service' do
+      expect(chef_run).to start_service 'elasticsearch'
+    end
+
+    it 'should create an elasticsearch template in /etc/elasticsearch/elasticsearch.yml' do
+      expect(chef_run).to create_template('/etc/elasticsearch/elasticsearch.yml')
     end
   end
 end
