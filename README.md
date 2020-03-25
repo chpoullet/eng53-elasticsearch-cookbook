@@ -1,6 +1,6 @@
 # Elasticsearch Cookbook
 
-This is the cookbook for the elasticsearch instance within our infrastructure.
+This is the cookbook for the elasticsearch instance within our infrastructure. The kitchencloud.yml completes this action on AWS cloud web server, kitchen.yml can be used for local.
 
 ## Unit tests:
 
