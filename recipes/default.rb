@@ -43,5 +43,6 @@ execute 'fix_template' do
 end
 
 service 'elasticsearch' do
-  action [:enable]
+  supports status: true, restart: true, reload: true
+  action [:enable, :start]
 end
