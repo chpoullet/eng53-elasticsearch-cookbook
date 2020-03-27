@@ -19,8 +19,9 @@ describe 'elasticsearch_cookbook::default' do
     it 'enables the elasticsearch service' do
       expect(chef_run).to enable_service 'elasticsearch'
     end
+
     it 'should update source list' do
-     expect(chef_run).to update_apt_update('updated_sources')
+     expect(chef_run).to update_apt_update('update_sources')
     end
 
     it 'should create an elasticsearch template in /etc/elasticsearch/elasticsearch.yml' do
