@@ -17,5 +17,3 @@ kitchen test
 ```
 
 ![Elasticsearch logo](https://i0.wp.com/www.thecuriousdev.org/wp-content/uploads/2018/01/Elasticsearch-Logo-Color-V.jpg.png?fit=3422%2C1781&ssl=1)
-
-test
